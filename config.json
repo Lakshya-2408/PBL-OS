@@ -1,0 +1,18 @@
+{
+    "whitelist": [
+        "explorer.exe",
+        "System",
+        "python.exe"
+    ],
+    "blacklist": [],
+    "suspicious_keywords": [
+        "cryptominer",
+        "malware",
+        "virus"
+    ],
+    "cpu_threshold": 80,
+    "memory_threshold": 80,
+    "auto_terminate_zombies": true,
+    "battery_saver_mode": false,
+    "gaming_mode": false
+}
