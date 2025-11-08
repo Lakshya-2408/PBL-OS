@@ -1,0 +1,96 @@
+2025-11-08 23:41:37,838 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-08 23:41:37,839 INFO [33mPress CTRL+C to quit[0m
+2025-11-08 23:41:37,841 INFO  * Restarting with stat
+2025-11-08 23:41:41,331 WARNING  * Debugger is active!
+2025-11-08 23:41:41,334 INFO  * Debugger PIN: 103-359-186
+2025-11-08 23:42:02,915 INFO 127.0.0.1 - - [08/Nov/2025 23:42:02] "GET / HTTP/1.1" 200 -
+2025-11-08 23:42:03,075 INFO 127.0.0.1 - - [08/Nov/2025 23:42:03] "GET /static/style.css HTTP/1.1" 200 -
+2025-11-08 23:42:08,756 INFO 127.0.0.1 - - [08/Nov/2025 23:42:08] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:42:15,522 INFO 127.0.0.1 - - [08/Nov/2025 23:42:15] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:42:21,094 INFO 127.0.0.1 - - [08/Nov/2025 23:42:21] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:42:26,674 INFO 127.0.0.1 - - [08/Nov/2025 23:42:26] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:42:32,040 INFO 127.0.0.1 - - [08/Nov/2025 23:42:32] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:42:39,520 INFO 127.0.0.1 - - [08/Nov/2025 23:42:39] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:42:51,010 INFO 127.0.0.1 - - [08/Nov/2025 23:42:51] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:43:10,567 INFO 127.0.0.1 - - [08/Nov/2025 23:43:10] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:43:22,307 INFO 127.0.0.1 - - [08/Nov/2025 23:43:22] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:43:26,127 INFO 127.0.0.1 - - [08/Nov/2025 23:43:26] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:43:26,416 INFO 127.0.0.1 - - [08/Nov/2025 23:43:26] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:43:26,700 INFO 127.0.0.1 - - [08/Nov/2025 23:43:26] "GET /api/stats HTTP/1.1" 200 -
+2025-11-08 23:43:33,639 INFO 127.0.0.1 - - [08/Nov/2025 23:43:33] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:43:37,351 INFO 127.0.0.1 - - [08/Nov/2025 23:43:37] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:43:49,800 INFO 127.0.0.1 - - [08/Nov/2025 23:43:49] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:44:00,998 INFO 127.0.0.1 - - [08/Nov/2025 23:44:00] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:44:04,656 INFO 127.0.0.1 - - [08/Nov/2025 23:44:04] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:44:07,485 INFO 127.0.0.1 - - [08/Nov/2025 23:44:07] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:44:07,526 INFO 127.0.0.1 - - [08/Nov/2025 23:44:07] "POST /api/toggle_autokill HTTP/1.1" 200 -
+2025-11-08 23:44:12,943 INFO 127.0.0.1 - - [08/Nov/2025 23:44:12] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:44:16,670 INFO 127.0.0.1 - - [08/Nov/2025 23:44:16] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:44:22,963 INFO 127.0.0.1 - - [08/Nov/2025 23:44:22] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:44:24,421 INFO 127.0.0.1 - - [08/Nov/2025 23:44:24] "POST /api/toggle_autokill HTTP/1.1" 200 -
+2025-11-08 23:44:26,856 INFO 127.0.0.1 - - [08/Nov/2025 23:44:26] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:44:27,633 INFO 127.0.0.1 - - [08/Nov/2025 23:44:27] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:44:46,580 INFO 127.0.0.1 - - [08/Nov/2025 23:44:46] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:44:50,847 INFO 127.0.0.1 - - [08/Nov/2025 23:44:50] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:45:09,474 INFO 127.0.0.1 - - [08/Nov/2025 23:45:09] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:45:09,496 INFO 127.0.0.1 - - [08/Nov/2025 23:45:09] "GET / HTTP/1.1" 200 -
+2025-11-08 23:45:09,708 INFO 127.0.0.1 - - [08/Nov/2025 23:45:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-11-08 23:45:20,586 INFO 127.0.0.1 - - [08/Nov/2025 23:45:20] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:45:28,060 INFO 127.0.0.1 - - [08/Nov/2025 23:45:28] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:45:30,321 INFO 127.0.0.1 - - [08/Nov/2025 23:45:30] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:45:43,922 INFO 127.0.0.1 - - [08/Nov/2025 23:45:43] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:45:50,077 INFO 127.0.0.1 - - [08/Nov/2025 23:45:50] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:46:01,477 INFO 127.0.0.1 - - [08/Nov/2025 23:46:01] "GET / HTTP/1.1" 200 -
+2025-11-08 23:46:01,865 INFO 127.0.0.1 - - [08/Nov/2025 23:46:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-11-08 23:46:22,330 INFO 127.0.0.1 - - [08/Nov/2025 23:46:22] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:46:22,589 INFO 127.0.0.1 - - [08/Nov/2025 23:46:22] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:46:39,622 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-08 23:46:39,622 INFO [33mPress CTRL+C to quit[0m
+2025-11-08 23:46:39,624 INFO  * Restarting with stat
+2025-11-08 23:46:43,261 WARNING  * Debugger is active!
+2025-11-08 23:46:43,264 INFO  * Debugger PIN: 103-359-186
+2025-11-08 23:46:50,105 INFO 127.0.0.1 - - [08/Nov/2025 23:46:50] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:46:50,785 INFO 127.0.0.1 - - [08/Nov/2025 23:46:50] "GET / HTTP/1.1" 200 -
+2025-11-08 23:46:51,268 INFO 127.0.0.1 - - [08/Nov/2025 23:46:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-11-08 23:46:57,673 INFO 127.0.0.1 - - [08/Nov/2025 23:46:57] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:47:03,085 INFO 127.0.0.1 - - [08/Nov/2025 23:47:03] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:47:08,707 INFO 127.0.0.1 - - [08/Nov/2025 23:47:08] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:47:15,394 INFO 127.0.0.1 - - [08/Nov/2025 23:47:15] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:47:21,853 INFO 127.0.0.1 - - [08/Nov/2025 23:47:21] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:47:31,260 INFO 127.0.0.1 - - [08/Nov/2025 23:47:31] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:47:56,728 INFO 127.0.0.1 - - [08/Nov/2025 23:47:56] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:47:57,514 INFO 127.0.0.1 - - [08/Nov/2025 23:47:57] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:48:10,444 INFO 127.0.0.1 - - [08/Nov/2025 23:48:10] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:48:15,666 INFO 127.0.0.1 - - [08/Nov/2025 23:48:15] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:48:18,913 INFO 127.0.0.1 - - [08/Nov/2025 23:48:18] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:48:23,884 INFO 127.0.0.1 - - [08/Nov/2025 23:48:23] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:48:37,334 INFO 127.0.0.1 - - [08/Nov/2025 23:48:37] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:48:37,452 INFO 127.0.0.1 - - [08/Nov/2025 23:48:37] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:48:47,855 INFO 127.0.0.1 - - [08/Nov/2025 23:48:47] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:48:53,325 INFO 127.0.0.1 - - [08/Nov/2025 23:48:53] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:48:58,660 INFO 127.0.0.1 - - [08/Nov/2025 23:48:58] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:49:02,657 INFO 127.0.0.1 - - [08/Nov/2025 23:49:02] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:49:16,486 INFO 127.0.0.1 - - [08/Nov/2025 23:49:16] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:49:17,579 INFO 127.0.0.1 - - [08/Nov/2025 23:49:17] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:49:30,049 INFO 127.0.0.1 - - [08/Nov/2025 23:49:30] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:49:34,721 INFO 127.0.0.1 - - [08/Nov/2025 23:49:34] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:49:39,100 INFO 127.0.0.1 - - [08/Nov/2025 23:49:39] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:49:43,323 INFO 127.0.0.1 - - [08/Nov/2025 23:49:43] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:49:55,834 INFO 127.0.0.1 - - [08/Nov/2025 23:49:55] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:49:59,087 INFO 127.0.0.1 - - [08/Nov/2025 23:49:59] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:50:08,335 INFO 127.0.0.1 - - [08/Nov/2025 23:50:08] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:50:16,016 INFO 127.0.0.1 - - [08/Nov/2025 23:50:16] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:50:19,959 INFO 127.0.0.1 - - [08/Nov/2025 23:50:19] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:50:23,002 INFO 127.0.0.1 - - [08/Nov/2025 23:50:23] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:50:32,257 INFO 127.0.0.1 - - [08/Nov/2025 23:50:32] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:50:33,095 INFO 127.0.0.1 - - [08/Nov/2025 23:50:33] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:50:36,679 INFO 127.0.0.1 - - [08/Nov/2025 23:50:36] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:50:37,723 INFO 127.0.0.1 - - [08/Nov/2025 23:50:37] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:50:58,842 INFO 127.0.0.1 - - [08/Nov/2025 23:50:58] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:51:59,478 INFO 127.0.0.1 - - [08/Nov/2025 23:51:59] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:53:01,131 INFO 127.0.0.1 - - [08/Nov/2025 23:53:01] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:54:01,639 INFO 127.0.0.1 - - [08/Nov/2025 23:54:01] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:54:37,988 INFO 127.0.0.1 - - [08/Nov/2025 23:54:37] "GET /api/processes HTTP/1.1" 200 -
+2025-11-08 23:54:48,782 INFO 127.0.0.1 - - [08/Nov/2025 23:54:48] "GET /api/processes HTTP/1.1" 200 -

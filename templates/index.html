@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Custom Task Manager Pro v2</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    let autoKill = {{ auto_kill }};
+    let activeTab = 'dashboard';
+
+    function showTab(tab){
+      activeTab = tab;
+      document.querySelectorAll('.tab').forEach(e=>e.style.display='none');
+      document.getElementById('tab-'+tab).style.display='block';
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      document.getElementById('btn-'+tab).classList.add('active');
+      if(tab==='analytics') loadAnalytics();
+    }
+
+    async function loadProcesses(){
+      if(activeTab!=='dashboard') return;
+      const res = await fetch('/api/processes');
+      const procs = await res.json();
+      const tbody = document.getElementById('procs');
+      tbody.innerHTML = '';
+      for(const p of procs){
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${p.pid}</td><td>${p.name||''}</td><td>${p.user||''}</td><td>${p.cpu||0}</td><td>${p.memory||0}</td><td>${p.category}</td><td>${p.lifetime_pred}</td><td style='color:${p.anomaly>70? "#ff4d4f":"#9bd"}'>${p.anomaly}</td><td>${p.threads}</td><td><button onclick="kill(${p.pid})">Kill</button></td>`;
+        if(p.anomaly>85) tr.style.background='#3a0f0f';
+        tbody.appendChild(tr);
+      }
+    }
+
+    async function kill(pid){
+      if(!confirm('Kill process '+pid+'?')) return;
+      const res = await fetch('/api/kill', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({pid})});
+      const data = await res.json();
+      alert(data.msg);
+      loadProcesses();
+    }
+
+    async function toggleAutoKill(){
+      autoKill = !autoKill;
+      await fetch('/api/toggle_autokill',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({enable:autoKill})});
+      document.getElementById('autokill-status').innerText = autoKill?'ON':'OFF';
+    }
+
+    async function retrain(){
+      if(!confirm('Retrain models? This may take a few seconds.')) return;
+      document.getElementById('retrain-btn').disabled = true;
+      const res = await fetch('/api/retrain', {method:'POST'});
+      const data = await res.json();
+      alert('Retrain finished. Check server logs for full output.');
+      document.getElementById('retrain-btn').disabled = false;
+    }
+
+    let chartCpu, chartMem;
+    async function loadAnalytics(){
+      const res = await fetch('/api/stats');
+      if(!res.ok){
+        document.getElementById('analytics-msg').innerText = 'No logs yet - collect data first.';
+        return;
+      }
+      const data = await res.json();
+      document.getElementById('analytics-msg').innerText = '';
+      const ctx1 = document.getElementById('cpuChart').getContext('2d');
+      const ctx2 = document.getElementById('memChart').getContext('2d');
+      const labels = data.times.map(t=>new Date(t).toLocaleTimeString());
+      if(chartCpu) chartCpu.destroy();
+      if(chartMem) chartMem.destroy();
+      chartCpu = new Chart(ctx1, {type:'line', data:{labels:labels, datasets:[{label:'CPU%', data:data.cpu, tension:0.4}]}, options:{responsive:true}});
+      chartMem = new Chart(ctx2, {type:'line', data:{labels:labels, datasets:[{label:'Mem%', data:data.mem, tension:0.4}]}, options:{responsive:true}});
+    }
+
+    setInterval(loadProcesses, 3000);
+    window.onload = ()=>{ showTab('dashboard'); document.getElementById('autokill-status').innerText = autoKill?'ON':'OFF'; loadProcesses(); };
+  </script>
+</head>
+<body>
+  <div class="nav">
+    <div class="brand">Custom Task Manager <span class="pro">Pro v2</span></div>
+    <div class="tabs">
+      <button id="btn-dashboard" class="tab-btn active" onclick="showTab('dashboard')">Dashboard</button>
+      <button id="btn-analytics" class="tab-btn" onclick="showTab('analytics')">Analytics</button>
+      <button id="btn-models" class="tab-btn" onclick="showTab('models')">Models</button>
+      <button id="btn-settings" class="tab-btn" onclick="showTab('settings')">Settings</button>
+    </div>
+  </div>
+  <div class="container">
+    <div id="tab-dashboard" class="tab">
+      <h2>Live Dashboard</h2>
+      <div class="row"><div>Auto-kill: <b id="autokill-status">OFF</b></div><div><button onclick="toggleAutoKill()">Toggle Auto-Kill</button></div></div>
+      <table>
+        <thead><tr><th>PID</th><th>Name</th><th>User</th><th>CPU%</th><th>Mem%</th><th>Category</th><th>Pred Life(s)</th><th>Anomaly</th><th>Threads</th><th>Action</th></tr></thead>
+        <tbody id="procs"></tbody>
+      </table>
+    </div>
+
+    <div id="tab-analytics" class="tab" style="display:none">
+      <h2>Analytics</h2>
+      <p id="analytics-msg">Loading...</p>
+      <canvas id="cpuChart" height="120"></canvas>
+      <canvas id="memChart" height="120"></canvas>
+    </div>
+
+    <div id="tab-models" class="tab" style="display:none">
+      <h2>Models</h2>
+      <p>Retrain models using current logs.</p>
+      <button id="retrain-btn" onclick="retrain()">Retrain Models</button>
+    </div>
+
+    <div id="tab-settings" class="tab" style="display:none">
+      <h2>Settings</h2>
+      <p>Collector interval: 3s (change in collector.py)</p>
+      <p>Auto-kill is OFF by default for safety.</p>
+    </div>
+  </div>
+</body>
+</html>
